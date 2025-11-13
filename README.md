@@ -22,10 +22,10 @@
 <p align="left"> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> </p>
 
 <h3 align="left">Support:</h3>
-<p><a href="https://www.buymeacoffee.com/rehab141"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="rehab141" /></a></p><br><br>
+<p><a href="https://www.buymeacoffee.com/lamiarahmanpritha-blip"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="lamiarahmanpritha-blip" /></a></p><br><br>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=rehab141&show_icons=true&locale=en&layout=compact" alt="rehab141" /></p>
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=lamiarahmanpritha-blip&show_icons=true&locale=en&layout=compact" alt="lamiarahmanpritha-blip" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=rehab141&show_icons=true&locale=en" alt="rehab141" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=lamiarahmanpritha-blip&show_icons=true&locale=en" alt="lamiarahmanpritha-blip" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rehab141&" alt="rehab141" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=lamiarahmanpritha-blip&" alt="lamiarahmanpritha-blip" /></p>
