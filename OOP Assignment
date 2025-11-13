@@ -1,0 +1,130 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Ticket
+{
+    protected:
+        string ticketID,source,desination;
+        float distance,fare;
+    public:
+        void setTicketInfo()
+        {
+            cout<<"Enter Ticket ID: ";
+            cin>>ticketID;
+            cout<<"Enter Source: ";
+            cin>>source;
+            cout<<"Enter Destination: ";
+            cin>>desination;
+            cout<<"Enter Distance (in km) : ";
+            cin>>distance;
+        }
+        virtual float calculateFare()
+        {
+            fare = distance*1.0;
+            return fare;
+        }
+        void displayTicketInfo()
+        {
+            cout<<"Ticket ID: "<<ticketID<<endl;
+            cout<<"Source: "<<source<<endl;
+            cout<<"Destination: "<<desination<<endl;
+            cout<<"Distance: "<<distance<<" km"<<endl;
+        }
+};
+class TrainTicket:private Ticket
+{
+    string coachType;
+    public:
+        void setTrainInfo()
+        {
+            cout<<"Enter Train Ticket Details: \n";
+            setTicketInfo();
+            int choose;
+            cout<<"1.AC\n2.Sleeper\n3.General\nEnter Coach Type: ";
+            cin>>choose;
+            switch(choose)
+            {
+                case 1:
+                    coachType="AC";
+                    break;
+                case 2:
+                    coachType="Sleeper";
+                    break;
+                case 3:
+                    coachType="General";
+                    break;
+                default:
+                    coachType="General";
+                    break;
+            }
+        }
+        float calculateFare()
+        {
+            fare = distance*1.0;
+            if(coachType=="AC") fare += 200;
+            else if(coachType=="Sleeper") fare += 100;
+            return fare;
+        }
+        void displayTrainTicket()
+        {
+            cout<<"\nTrain Ticket Details: \n";
+            displayTicketInfo();
+            cout<<"Coach Type: "<<coachType<<endl;
+            cout<<"Fare: "<<calculateFare()<<" tk "<<endl;
+            cout<<"------------------------------\n";
+        }
+    };
+    class FlightTicket:protected Ticket
+    {
+        string seatClass;
+        float luggageWeight;
+        public:
+            void setFlightInfo()
+            {
+                cout<<"\nEnter Flight Ticket Details: \n";
+                setTicketInfo();
+                int choose;
+                cout<<"1.Business\n2.Economy\nEnter Seat Class: ";
+                cin>>choose;
+                switch(choose)
+                {
+                    case 1:
+                        seatClass="Business";
+                        break;
+                    case 2:
+                        seatClass="Economy";
+                        break;
+                    default:
+                        seatClass="Economy";
+                        break;
+                }
+                cout<<"Enter Luggage Weight (in kg) :";
+                cin>>luggageWeight;
+            }
+            float calculateFare()
+            {
+                fare = distance*25.0;
+                if(seatClass=="Business") fare += 20000;
+                if(luggageWeight > 20) fare += (luggageWeight-20)*5000;
+                return fare;
+            }
+            void displayFlightTicket()
+            {
+                cout<<"\nFlight Ticket Details: \n";
+                displayTicketInfo();
+                cout<<"Seat Class: "<<seatClass<<endl;
+                cout<<"Luggage Weight: "<<luggageWeight<<endl;
+                cout<<"Fare: "<<calculateFare()<<" tk"<<endl;
+                cout<<"------------------------------\n";
+            }
+    };
+    int main()
+    {
+        TrainTicket t;
+        FlightTicket f;
+        t.setTrainInfo();
+        f.setFlightInfo();
+        t.displayTrainTicket();
+        f.displayFlightTicket();
+        return 0;
+    }
